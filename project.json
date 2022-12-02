@@ -1,15 +1,18 @@
 {
-  "name": "app1",
+  "name": "aaaa",
+  
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "./src",
   "projectType": "application",
   "targets": {
-    "build": {
+    "abs": {
       "executor": "@nrwl/vite:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/app1"
+        "outputPath": "dist/aaaa"
       },
       "configurations": {
         "development": {},
@@ -28,30 +31,36 @@
       "executor": "@nrwl/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "app1:build"
+        "buildTarget": "aaaa:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "app1:build:development"
+          "buildTarget": "aaaa:build:development"
         },
         "production": {
-          "buildTarget": "app1:build:production",
+          "buildTarget": "aaaa:build:production",
           "hmr": false
         }
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["{projectRoot}/coverage"],
+      "outputs": [
+        "{projectRoot}/coverage"
+      ],
       "options": {
         "passWithNoTests": true
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "./src/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     }
   },

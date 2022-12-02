@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@codelensviterepro/packages/newlib2": [
+        "packages/packages/newlib2/src/index.ts"
+      ],
+      "@codelensviterepro/testlib1": ["testlib1/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

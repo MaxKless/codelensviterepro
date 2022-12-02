@@ -24,7 +24,11 @@
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": ["default", "!{projectRoot}/.eslintrc.json"],
-    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
+    "sharedGlobals": [
+      "{workspaceRoot}/babel.config.json",
+      "{workspaceRoot}/babel.config.json",
+      "{workspaceRoot}/babel.config.json"
+    ]
   },
   "generators": {
     "@nrwl/react": {
@@ -43,5 +47,5 @@
       }
     }
   },
-  "defaultProject": "app1"
+  "defaultProject": "aaaa"
 }

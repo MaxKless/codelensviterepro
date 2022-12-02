@@ -8,23 +8,29 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "e2e/cypress.config.ts",
-        "devServerTarget": "app1:serve:development",
+        "devServerTarget": "aaaa:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "app1:serve:production"
+          "devServerTarget": "aaaa:serve:production"
         }
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "e2e/**/*.{js,ts}"
+        ]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["app1"]
+  "implicitDependencies": [
+    "aaaa"
+  ]
 }

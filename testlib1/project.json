@@ -1,0 +1,46 @@
+{
+  "name": "testlib1",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "testlib1/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/testlib1"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["testlib1/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "testlib1:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "testlib1:build:development"
+        },
+        "production": {
+          "buildTarget": "testlib1:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["{projectRoot}/coverage"],
+      "options": {
+        "passWithNoTests": true
+      }
+    }
+  }
+}
