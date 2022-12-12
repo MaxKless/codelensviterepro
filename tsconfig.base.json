@@ -15,10 +15,21 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@codelensviterepro/aaaaabbbb": ["packages/aaaaabbbb/src/index.ts"],
+      "@codelensviterepro/five": ["packages/five/src/index.ts"],
+      "@codelensviterepro/fourth": ["packages/fourth/src/index.ts"],
+      "@codelensviterepro/hello": ["packages/hello/src/index.ts"],
+      "@codelensviterepro/lib10": ["packages/lib10/src/index.ts"],
+      "@codelensviterepro/lib6": ["packages/lib6/src/index.ts"],
+      "@codelensviterepro/lib7": ["packages/lib7/src/index.ts"],
+      "@codelensviterepro/lib8": ["packages/lib8/src/index.ts"],
+      "@codelensviterepro/lib9": ["packages/lib9/src/index.ts"],
       "@codelensviterepro/packages/newlib2": [
         "packages/packages/newlib2/src/index.ts"
       ],
-      "@codelensviterepro/testlib1": ["testlib1/src/index.ts"]
+      "@codelensviterepro/second": ["packages/second/src/index.ts"],
+      "@codelensviterepro/testlib1": ["testlib1/src/index.ts"],
+      "@codelensviterepro/third": ["packages/third/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
